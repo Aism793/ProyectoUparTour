@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Reserva Add</h1>
+</div>
+<p>Aplicación para agregar reservas</p>
+
+<!--<div class="form-group">
+    <label>Id:
+        <input [(ngModel)]="reserva.id" class="form-control" placeholder="digite el id" type="number"/>
+    </label>
+</div>-->
+<div class="form-group">
+    <label>ClienteId:
+        <input [(ngModel)]="reserva.clienteid" class="form-control" placeholder="digite el código del cliente" type="number"/>
+    </label>
+</div>
+<!--<div class="form-group">
+        <label>Estado:
+            <input type="checkbox" class="form-control" [(ngModel)]="reserva.estado" />
+        </label>
+    </div>-->
+<div class="form-group">
+            <label>Cantidad personas:
+                <input [(ngModel)]="reserva.cantidadpersonas" class="form-control" placeholder="digite el número de personas" type="number"/>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Fecha:
+                <input [(ngModel)]="reserva.fecha" class="form-control" placeholder="digite la fecha" type="string"/>
+            </label>
+        </div>
+<div class="form-group">
+    <button (click)="add()" class="btn btn-priority">Registrar</button>
+                </div>

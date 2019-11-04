@@ -52,6 +52,29 @@ namespace ProyectoUparTour.Migrations
 
                     b.ToTable("ClienteItems");
                 });
+            modelBuilder.Entity("ClienteSharpHTTP.Models.ReservaItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Estado")
+                        .HasColumnType("bool");
+
+                    b.Property<int>("CantidadPersonas")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Fecha")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReservaItems");
+                });
 #pragma warning restore 612, 618
         }
     }

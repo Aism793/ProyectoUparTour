@@ -8,6 +8,9 @@ import { AyudaComponent } from './ayuda/ayuda.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { MenuComponent } from './menu/menu.component';
+import { ReservaListComponent } from './reserva-list/reserva-list.component';
+import { ReservaAddComponent } from './reserva-add/reserva-add.component';
+import { ReservaEditComponent } from './reserva-edit/reserva-edit.component';
 
 const routes: Routes = [
   {
@@ -21,6 +24,18 @@ const routes: Routes = [
   {
     path:'clienteedit/:id',
     component:ClienteEditComponent
+  },
+  {
+    path:'reservalist',
+    component: ReservaListComponent
+  },
+  {
+    path:'reservaadd',
+    component:ReservaAddComponent
+  },
+  {
+    path:'reservaedit/:id',
+    component:ReservaEditComponent
   },
   {
     path:'ayuda',

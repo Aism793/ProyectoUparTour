@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+
 namespace ClienteSharpHTTP.Models
 {
     public class ClienteContext: DbContext
@@ -9,5 +10,6 @@ namespace ClienteSharpHTTP.Models
 
         }
         public DbSet<ClienteItem> ClienteItems {get;set;}
+        public DbSet<ReservaItem> ReservaItems {get;set;}
     }
 }

@@ -19,6 +19,9 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { MenuComponent } from './menu/menu.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ReservaAddComponent } from './reserva-add/reserva-add.component';
+import { ReservaListComponent } from './reserva-list/reserva-list.component';
+import { ReservaEditComponent } from './reserva-edit/reserva-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { AppRoutingModule } from './app-routing.module';
     AyudaComponent,
     ServiciosComponent,
     MenuComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    ReservaAddComponent,
+    ReservaListComponent,
+    ReservaEditComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

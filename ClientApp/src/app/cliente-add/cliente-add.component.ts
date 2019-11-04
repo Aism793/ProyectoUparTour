@@ -8,7 +8,6 @@ import { Cliente } from '../models/cliente';
   styleUrls: ['./cliente-add.component.css']
 })
 export class ClienteAddComponent implements OnInit {
-  
   constructor(private clienteService: ClienteService) { }
   cliente: Cliente;
   ngOnInit() {
@@ -18,7 +17,7 @@ export class ClienteAddComponent implements OnInit {
   add(){
     this.clienteService.addCliente(this.cliente)
     .subscribe(cliente => {
-      alert('Se agregó una nueva tarea')
+      alert('Se agregó un nuevo cliente')
     });
   }
 }
