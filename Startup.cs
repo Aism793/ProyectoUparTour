@@ -24,8 +24,14 @@ namespace ProyectoUparTour
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+<<<<<<< HEAD
             services.AddDbContext<ClienteContext>(opt=>
             opt.UseSqlServer(@"Server=DESKTOP-K6MAC0O\SQLEXPRESS;Database=UparTourDB;Trusted_Connection=True;"));
+=======
+            //services.AddDbContext<ClienteContext>(opt=>
+            //opt.UseSqlServer(@"Server=DESKTOP-K6MAC0O\SQLEXPRESS;Database=UparTourDB;Trusted_Connection=True;"));
+            services.AddDbContext<ClienteContext>(opt=> opt.UseSqlServer(@"Server=MICHEEL-PC\;Database=UparTourDB;Trusted_Connection=True;"));
+>>>>>>> first commit
             services.AddControllersWithViews();
 
             //Register the Swagger services

@@ -50,7 +50,11 @@ namespace ProyectoUparTour.Migrations
 
                     b.ToTable("ClienteItems");
                 });
+<<<<<<< HEAD
             modelBuilder.Entity("ClienteSharpHTTP.Models.ReservaItem", b =>
+=======
+           modelBuilder.Entity("ClienteSharpHTTP.Models.ReservaItem", b =>
+>>>>>>> first commit
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

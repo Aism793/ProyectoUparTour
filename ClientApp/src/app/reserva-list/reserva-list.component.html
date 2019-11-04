@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div>
     <h1 class="h2">List</h1>
     </div>
@@ -27,4 +28,41 @@
             </tr>
         </table>
     </div>
+=======
+<header class="Titulo">
+        <h1>Reservas</h1>
+    </header>
+    <body>
+            <div>
+                    <!--<h1 class="h2">List</h1>-->
+                    </div>
+                    <div>
+                        <table class='table table-striped'>
+                            <thead>
+                                <tr>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>ClienteId</th>
+                                        <th>Estado</th>
+                                        <th>Cantidad personas</th>
+                                        <th>Fecha</th>
+                                        <th>Ver</th>
+                                    </tr>
+                                 
+                            </thead>
+                            <tr *ngFor="let reserva of reservas">
+                               <td>{{reserva.id}}</td>
+                               <td>{{reserva.clienteId}}</td>
+                               <td><span *ngIf="reserva.estado===true;"><b>Concretada</b></span></td>
+                               <td>{{reserva.cantidadPersonas}}</td>
+                               <td>{{reserva.fecha}}</td>             
+                               <td><a routerLink="/reservaedit/{{reserva.id}}">
+                                ver
+                               </a></td>
+                            </tr>
+                        </table>
+                    </div>
+    </body>
+    
+>>>>>>> first commit
 
