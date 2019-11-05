@@ -1,79 +1,103 @@
 <header>
+   
+  
   <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+
+class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+>
+<head>
+<title>Prueba de Bootstrap 4</title> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<div class="container">
+<div class="Borde-Menu">
+    <div class="Menu">
+      <!--   <a class="navbar-brand" [routerLink]="['/']">ProyectoUparTour</a>
+<button
+class="navbar-toggler"
+type="button"
+data-toggle="collapse"
+data-target=".navbar-collapse"
+aria-label="Toggle navigation"
+[attr.aria-expanded]="isExpanded"
+(click)="toggle()"
+>
+<span class="navbar-toggler-icon"></span>
+</button>-->
+<div
+class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+[ngClass]="{ show: isExpanded }"
+>
+<ul class="nav justify-content-center">
+<!--<li
+  class="nav-item"
+  [routerLinkActive]="['link-active']"
+  [routerLinkActiveOptions]="{ exact: true }"
+>
+  <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+</li>
+<li class="nav-item" [routerLinkActive]="['link-active']">
+  <a class="nav-link text-dark" [routerLink]="['/counter']"
+    >Counter</a
   >
-    <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">ProyectoUparTour</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-        aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded"
-        (click)="toggle()"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
-        [ngClass]="{ show: isExpanded }"
-      >
-        <ul class="navbar-nav flex-grow">
-          <!--<li
-            class="nav-item"
-            [routerLinkActive]="['link-active']"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
-            >
-          </li>-->
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/menu']"
-              >Menú</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/servicios']"
-              >Servicios</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/ayuda']"
-              >Ayuda</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/nosotros']"
-              >Nosotros</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/clientelist']"
-              >Consultar clientes</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/reservalist']"
-              >Consultar reservas</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/reservaadd']"
-              >Agregar reservas</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+</li>
+<li class="nav-item" [routerLinkActive]="['link-active']">
+  <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
+    >Fetch data</a
+  >
+</li>-->
+
+<li class="nav-item" [routerLinkActive]="['link-active']">
+  <a class="nav-link text-dark" [routerLink]="['/menu']"
+    >Menú</a
+  >&nbsp;&nbsp;
+</li>
+<li class="nav-item" [routerLinkActive]="['link-active']">
+  <a class="nav-link text-dark" [routerLink]="['/servicios']"
+    >Servicios</a
+  >&nbsp;&nbsp;
+</li>
+<li class="nav-item" [routerLinkActive]="['link-active']">
+  <a class="nav-link text-dark" [routerLink]="['/ayuda']"
+    >Ayuda</a
+  >&nbsp;&nbsp;
+</li>
+<li class="nav-item" [routerLinkActive]="['link-active']">
+  <a class="nav-link text-dark" [routerLink]="['/nosotros']"
+    >Nosotros</a
+  >&nbsp;&nbsp;
+</li>
+<li class="nav-item" [routerLinkActive]="['link-active']">
+  <a class="nav-link text-dark" [routerLink]="['/clientelist']"
+    >Consultar clientes</a
+  >&nbsp;&nbsp;
+</li>
+<li class="nav-item" [routerLinkActive]="['link-active']">
+  <a class="nav-link text-dark" [routerLink]="['/reservalist']"
+    >Consultar reservas</a
+  >&nbsp;&nbsp;
+</li>
+
+</ul>
+</div>
+    </div>    
+    </div>       
+    
+</div>
+
+</nav> 
+
+
 </header>
+<div >
+<div class="borde">
+<div class="agrupar">
+<div class="container">
+<router-outlet></router-outlet>
+
+</div>
+</div>
+</div></div>
+
