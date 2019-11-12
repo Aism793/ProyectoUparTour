@@ -20,16 +20,16 @@
     </div>
     <div class="form-group">
         <label>Cantidad personas:
-            <input [(ngModel)]="reserva.cantidadpersonas" class="form-control" placeholder="digite número de personas" type="number"/>
+            <input [(ngModel)]="reserva.cantidadpersonas" class="form-control" required placeholder="digite número de personas" type="number"/>
         </label>
     </div>
     <div class="form-group">
         <label>Fecha:
-            <input [(ngModel)]="reserva.fecha" class="form-control" placeholder="digite fecha" type="text"/>
+            <input [(ngModel)]="reserva.fecha" class="form-control" required placeholder="digite fecha" type="string"/>
         </label>
     </div>
     <div class="form-group">
-        <button (click)="update()" class="btn btn-primary">Actualizar</button>
+        <button (click)="update()" class="btn btn-primary">Actualizar</button>&nbsp;&nbsp;
         <button (click)="delete()" class="btn btn-primary">Eliminar</button>
     </div>
 </div>

@@ -22,7 +22,7 @@ export class ClienteEditComponent implements OnInit {
     this.get();
   }
   get(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = +this.route.snapshot.paramMap.get('identificacion');
     this.clienteService.get(id).subscribe(hero=>this.cliente=hero);
   }
   update(): void{

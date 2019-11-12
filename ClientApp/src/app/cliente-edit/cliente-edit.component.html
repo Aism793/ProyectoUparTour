@@ -3,11 +3,11 @@
         <h1 class="h2">Detalle Cliente</h1>
     </div>
     <p>Editar/Eliminar clientes</p>
-    <div class="form-group">
+    <!--<div class="form-group">
         <label>Id:
             {{cliente.id}}
         </label>
-    </div>
+    </div>-->
     <div class="form-group">
         <label>Identificación:
             {{cliente.identificacion}}
@@ -15,36 +15,36 @@
     </div>
     <div class="form-group">
         <label>Nombre:
-            <input [(ngModel)]="cliente.nombre" class="form-control" placeholder="digite nombre" type="text"/>
+            <input [(ngModel)]="cliente.nombre" class="form-control" required placeholder="digite nombre" type="text"/>
         </label>
     </div>
     <div class="form-group">
         <label>Apellidos:
-            <input [(ngModel)]="cliente.apellidos" class="form-control" placeholder="digite apellidos" type="text"/>
+            <input [(ngModel)]="cliente.apellidos" class="form-control" required placeholder="digite apellidos" type="text"/>
         </label>
     </div>
     <div class="form-group">
         <label>Correo:
-            <input [(ngModel)]="cliente.correo" class="form-control" placeholder="digite correo" type="text"/>
+            <input [(ngModel)]="cliente.correo" class="form-control" required placeholder="digite correo" type="text"/>
         </label>
     </div>
     <div class="form-group">
         <label>Contraseña:
-            <input [(ngModel)]="cliente.contrasena" class="form-control" placeholder="digite contraseña" type="text"/>
+            <input [(ngModel)]="cliente.contrasena" class="form-control" required placeholder="digite contraseña" type="text"/>
         </label>
     </div>
     <div class="form-group">
         <label>Dirección:
-            <input [(ngModel)]="cliente.direccion" class="form-control" placeholder="digite dirección" type="text"/>
+            <input [(ngModel)]="cliente.direccion" class="form-control"required placeholder="digite dirección" type="text"/>
         </label>
     </div>
     <div class="form-group">
         <label>Teléfono:
-            <input [(ngModel)]="cliente.telefono" class="form-control" placeholder="digite teléfono" type="number"/>
+            <input [(ngModel)]="cliente.telefono" class="form-control" required placeholder="digite teléfono" type="number"/>
         </label>
     </div>
     <div class="form-group">
-        <button (click)="update()" class="btn btn-primary">Actualizar</button>
+        <button (click)="update()" class="btn btn-primary">Actualizar</button>&nbsp;&nbsp;
         <button (click)="delete()" class="btn btn-primary">Eliminar</button>
     </div>
 </div>

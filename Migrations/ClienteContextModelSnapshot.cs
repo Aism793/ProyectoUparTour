@@ -20,15 +20,15 @@ namespace ProyectoUparTour.Migrations
 
             modelBuilder.Entity("ClienteSharpHTTP.Models.ClienteItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Identificacion")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("nvarchar(15)")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Apellidos")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Contraseña")
+                    b.Property<string>("Contrasena")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Correo")
@@ -37,16 +37,13 @@ namespace ProyectoUparTour.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Identificacion")
-                        .HasColumnType("int");
-
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("Telefono")
                         .HasColumnType("bigint");
 
-                    b.HasKey("Id");
+                    b.HasKey("Identificacion");
 
                     b.ToTable("ClienteItems");
                 });
@@ -57,8 +54,8 @@ namespace ProyectoUparTour.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
+                    b.Property<string>("ClienteId")
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<bool>("Estado")
                         .HasColumnType("bool");
@@ -67,7 +64,7 @@ namespace ProyectoUparTour.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Fecha")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 

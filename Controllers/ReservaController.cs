@@ -19,7 +19,7 @@ namespace ReservaSharpHTTP.Controllers
            if(_context.ReservaItems.Count()==0)
            {
                _context.ReservaItems.Add(new ReservaItem 
-               {ClienteId=1002483121,Estado=false, CantidadPersonas=0, Fecha="00/00/0000"});
+               {Id=0,ClienteId="1002483121",Estado=false, CantidadPersonas=0, Fecha="00/00/0000"});
             
                _context.SaveChanges();
            }
@@ -42,6 +42,10 @@ namespace ReservaSharpHTTP.Controllers
        [HttpPost]
        public async Task<ActionResult<ReservaItem>> PostReservaItem(ReservaItem item)
        {
+           if(!ModelState.IsValid)
+          {
+            return BadRequest(ModelState);
+          }
            _context.ReservaItems.Add(item);
            await _context.SaveChangesAsync();
            return CreatedAtAction(nameof(GetReservaItem), new {id=item.Id}, item);

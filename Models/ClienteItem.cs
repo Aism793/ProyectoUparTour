@@ -1,31 +1,30 @@
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace ClienteSharpHTTP.Models
 {
     public class ClienteItem
     {
-        [JsonProperty("id")]
-        public int Id {get;set;}
 
-        [JsonProperty("identificacion")]
-        public int Identificacion {get;set;}
+        [Key]
+        public string Identificacion {get;set;}
 
-        [JsonProperty("nombre")]
+        [Required]        
         public string Nombre {get;set;}
 
-        [JsonProperty("apellidos")]
+        [Required]
         public string Apellidos {get;set;}
 
-        [JsonProperty("correo")]
+        [Required, EmailAddress]
         public string Correo {get;set;}
 
-        [JsonProperty("contrasena")]
+        [Required]
         public string Contrasena {get;set;}
 
-        [JsonProperty("direccion")]
+        [Required]
         public string Direccion {get;set;}
-
-        [JsonProperty("telefono")]
+  
+        [Required]
         public uint Telefono {get;set;}
     }
 }

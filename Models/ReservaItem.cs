@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace ClienteSharpHTTP.Models
 {
@@ -7,16 +8,16 @@ namespace ClienteSharpHTTP.Models
         [JsonProperty("id")]
         public int Id {get;set;}
 
-        [JsonProperty("clienteid")]
-        public int ClienteId {get;set;}
+        [Required]
+        public string ClienteId {get;set;}
 
-        [JsonProperty("estado")]
+        [Required]
         public bool Estado {get;set;}
 
-        [JsonProperty("cantidadpersonas")]
+        [Required]
         public int CantidadPersonas {get;set;}
 
-        [JsonProperty("fecha")]
+        [Required]
         public string Fecha {get;set;}
     }
 }

@@ -10,7 +10,7 @@
                         <thead>
                             <tr>
                                 <tr>
-                                    <th>Id</th>
+                                    <!--<th>Id</th>-->
                                     <th>Identificación</th>
                                     <th>Nombre</th>
                                     <th>Apellidos</th>
@@ -23,7 +23,7 @@
                             
                         </thead>
                         <tr *ngFor="let cliente of clientes">
-                           <td>{{cliente.id}}</td>
+                           <!--<td>{{cliente.id}}</td>-->
                            <td>{{cliente.identificacion}}</td>
                            <td>{{cliente.nombre}}</td>
                            <td>{{cliente.apellidos}}</td>
@@ -31,7 +31,7 @@
                            <td>{{cliente.contrasena}}</td>
                            <td>{{cliente.direccion}}</td>
                            <td>{{cliente.telefono}}</td>
-                           <td><a routerLink="/clienteedit/{{cliente.id}}">
+                           <td><a routerLink="/clienteedit/{{cliente.identificacion}}">
                             ver
                            </a></td>
                         </tr>

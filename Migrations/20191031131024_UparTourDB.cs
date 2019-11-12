@@ -10,19 +10,19 @@ namespace ProyectoUparTour.Migrations
                 name: "ClienteItems",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Identificacion = table.Column<int>(nullable: false),
-                    Nombre = table.Column<string>(nullable: true),
-                    Apellidos = table.Column<string>(nullable: true),
-                    Correo = table.Column<string>(nullable: true),
-                    Contraseña = table.Column<string>(nullable: true),
-                    Direccion = table.Column<string>(nullable: true),
+                    Identificacion = table.Column<string>(nullable: false)
+                        .Annotation("SqlServer:Identity",""),
+                    
+                    Nombre = table.Column<string>(nullable: false),
+                    Apellidos = table.Column<string>(nullable: false),
+                    Correo = table.Column<string>(nullable: false),
+                    Contrasena = table.Column<string>(nullable: false),
+                    Direccion = table.Column<string>(nullable: false),
                     Telefono = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ClienteItems", x => x.Id);
+                    table.PrimaryKey("PK_ClienteItems", x => x.Identificacion);
                 });
             migrationBuilder.CreateTable(
                 name: "ReservaItems",
@@ -30,10 +30,10 @@ namespace ProyectoUparTour.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ClienteId = table.Column<int>(nullable: false),
-                    Estado = table.Column<bool>(nullable: true),
-                    CantidadPersonas = table.Column<int>(nullable: true),
-                    Fecha = table.Column<string>(nullable: true),
+                    ClienteId = table.Column<string>(nullable: false),
+                    Estado = table.Column<bool>(nullable: false),
+                    CantidadPersonas = table.Column<int>(nullable: false),
+                    Fecha = table.Column<string>(nullable: false),
                 },
                 constraints: table =>
                 {

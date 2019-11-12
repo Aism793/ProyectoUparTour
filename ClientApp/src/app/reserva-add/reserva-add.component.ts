@@ -11,8 +11,12 @@ export class ReservaAddComponent implements OnInit {
   
   constructor(private reservaService: ReservaService) { }
   reserva: Reserva;
+   idCli: string;
+  public recibir(idCliente: string){
+      this.idCli=idCliente;
+  }
   ngOnInit() {
-    this.reserva={id:0, clienteid:0, estado:false, cantidadpersonas:0, fecha:"00/00/0000"};
+    this.reserva={id:0, clienteid:'', estado:false, cantidadpersonas:0, fecha:"00/00/0000"};
   }
   
   add(){

@@ -22,7 +22,7 @@ const routes: Routes = [
     component:ClienteAddComponent
   },
   {
-    path:'clienteedit/:id',
+    path:'clienteedit/:identificacion',
     component:ClienteEditComponent
   },
   {

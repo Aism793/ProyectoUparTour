@@ -1,6 +1,6 @@
 export class Reserva {
     id: number;
-    clienteid: number;
+    clienteid: string;
     estado: boolean;
     cantidadpersonas: number;
     fecha: string;

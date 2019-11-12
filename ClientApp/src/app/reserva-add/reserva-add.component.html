@@ -10,7 +10,7 @@
 </div>-->
 <div class="form-group">
     <label>ClienteId:
-        <input [(ngModel)]="reserva.clienteid" class="form-control" placeholder="digite el código del cliente" type="number"/>
+        <input [(ngModel)]="reserva.clienteid" class="form-control" required placeholder="digite el código del cliente" type="text"/>
     </label>
 </div>
 <!--<div class="form-group">
@@ -20,12 +20,12 @@
     </div>-->
 <div class="form-group">
             <label>Cantidad personas:
-                <input [(ngModel)]="reserva.cantidadpersonas" class="form-control" placeholder="digite el número de personas" type="number"/>
+                <input [(ngModel)]="reserva.cantidadpersonas" class="form-control" required placeholder="digite el número de personas" type="number"/>
             </label>
         </div>
         <div class="form-group">
             <label>Fecha:
-                <input [(ngModel)]="reserva.fecha" class="form-control" placeholder="digite la fecha" type="string"/>
+                <input [(ngModel)]="reserva.fecha" class="form-control" required placeholder="digite la fecha" type="string"/>
             </label>
         </div>
 <div class="form-group">
