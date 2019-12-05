@@ -61,6 +61,6 @@ export class ClienteService {
     };
   }
   private log(message: string){
-    alert(`ClienteService: ${message}`);
+    console.log(`ClienteService: ${message}`);
   }
 }

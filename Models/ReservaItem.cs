@@ -19,5 +19,8 @@ namespace ClienteSharpHTTP.Models
 
         [Required]
         public string Fecha {get;set;}
+
+        [Required]
+        public string Hora {get;set;}
     }
 }

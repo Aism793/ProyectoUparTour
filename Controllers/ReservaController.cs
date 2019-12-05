@@ -19,7 +19,7 @@ namespace ReservaSharpHTTP.Controllers
            if(_context.ReservaItems.Count()==0)
            {
                _context.ReservaItems.Add(new ReservaItem 
-               {Id=0,ClienteId="1002483121",Estado=false, CantidadPersonas=0, Fecha="00/00/0000"});
+               {Id=0,ClienteId="1002483121",Estado=false, CantidadPersonas=0, Fecha="00/00/0000", Hora="00:00"});
             
                _context.SaveChanges();
            }

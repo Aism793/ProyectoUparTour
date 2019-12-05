@@ -15,6 +15,7 @@
                                     <th>Estado</th>
                                     <th>Cantidad personas</th>
                                     <th>Fecha</th>
+                                    <th>Hora</th>
                                     <th>Ver</th>
                                 </tr>
                              
@@ -22,9 +23,10 @@
                         <tr *ngFor="let reserva of reservas">
                            <td>{{reserva.id}}</td>
                            <td>{{reserva.clienteId}}</td>
-                           <td><span *ngIf="reserva.estado===true;"><b>Concretada</b></span></td>
+                           <td><span *ngIf="reserva.estado===true;"><b>Concretada</b></span><span *ngIf="reserva.estado===false;"><b>Pendiente</b></span></td>
                            <td>{{reserva.cantidadPersonas}}</td>
-                           <td>{{reserva.fecha}}</td>             
+                           <td>{{reserva.fecha}}</td> 
+                           <td>{{reserva.hora}}</td>            
                            <td><a routerLink="/reservaedit/{{reserva.id}}">
                             ver
                            </a></td>

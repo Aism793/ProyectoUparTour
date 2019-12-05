@@ -4,5 +4,5 @@ export class Reserva {
     estado: boolean;
     cantidadpersonas: number;
     fecha: string;
-    
+    hora: string;
 }

@@ -8,16 +8,33 @@
         <input [(ngModel)]="reserva.id" class="form-control" placeholder="digite el id" type="number"/>
     </label>
 </div>-->
-<div class="form-group">
-    <label>ClienteId:
-        <input [(ngModel)]="reserva.clienteid" class="form-control" required placeholder="digite el código del cliente" type="text"/>
-    </label>
+<div *ngIf="cliente">
+    <div class="form-group">
+        <label>Cedula:
+            {{cliente.identificacion}}
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Nombre:
+            {{cliente.nombre}}
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Apellido:
+            {{cliente.apellidos}}
+        </label>
+    </div>
+
 </div>
+        
+
+
 <!--<div class="form-group">
         <label>Estado:
             <input type="checkbox" class="form-control" [(ngModel)]="reserva.estado" />
         </label>
     </div>-->
+ 
 <div class="form-group">
             <label>Cantidad personas:
                 <input [(ngModel)]="reserva.cantidadpersonas" class="form-control" required placeholder="digite el número de personas" type="number"/>
@@ -25,7 +42,12 @@
         </div>
         <div class="form-group">
             <label>Fecha:
-                <input [(ngModel)]="reserva.fecha" class="form-control" required placeholder="digite la fecha" type="string"/>
+                <input [(ngModel)]="reserva.fecha" class="form-control" required placeholder="digite la fecha" type="date"/>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Hora:
+                <input [(ngModel)]="reserva.hora" class="form-control" required placeholder="digite la hora" type="time"/>
             </label>
         </div>
 <div class="form-group">

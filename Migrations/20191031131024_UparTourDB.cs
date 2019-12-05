@@ -34,10 +34,89 @@ namespace ProyectoUparTour.Migrations
                     Estado = table.Column<bool>(nullable: false),
                     CantidadPersonas = table.Column<int>(nullable: false),
                     Fecha = table.Column<string>(nullable: false),
+                    Hora = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ReservaItems", x => x.Id);
+                });
+            migrationBuilder.CreateTable(
+                name: "LugarItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(nullable: false),
+                    Descripcion = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LugarItems", x => x.Id);
+                });
+            migrationBuilder.CreateTable(
+                name: "HotelItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(nullable: false),
+                    Direccion = table.Column<string>(nullable: false),
+                    Telefono = table.Column<long>(nullable: false),
+                    Precio = table.Column<double>(nullable: false),
+                    Descuento = table.Column<double>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HotelItems", x => x.Id);
+                });
+            migrationBuilder.CreateTable(
+                name: "RestauranteItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(nullable: false),
+                    Direccion = table.Column<string>(nullable: false),
+                    Telefono = table.Column<long>(nullable: false),
+                    Precio = table.Column<double>(nullable: false),
+                    Descuento = table.Column<double>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RestauranteItems", x => x.Id);
+                });
+            migrationBuilder.CreateTable(
+                name: "ConductorItems",
+                columns: table => new
+                {
+                    Identificacion = table.Column<string>(nullable: false)
+                        .Annotation("SqlServer:Identity",""),
+                    
+                    Nombre = table.Column<string>(nullable: false),
+                    Apellidos = table.Column<string>(nullable: false),
+                    Correo = table.Column<string>(nullable: false),
+                    Telefono = table.Column<long>(nullable: false),
+                    Licencia = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ConductorItems", x => x.Identificacion);
+                });
+            migrationBuilder.CreateTable(
+                name: "VehiculoItems",
+                columns: table => new
+                {
+                    Placa = table.Column<string>(nullable: false)
+                        .Annotation("SqlServer:Identity",""),
+                    Modelo = table.Column<string>(nullable: false),
+                    Marca = table.Column<string>(nullable: false),
+                    Soat = table.Column<string>(nullable: false),
+                    Tecnomecanica = table.Column<string>(nullable: false),
+                    Capacidad = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VehiculoItems", x => x.Placa);
                 });
         }
 
@@ -47,6 +126,16 @@ namespace ProyectoUparTour.Migrations
                 name: "ClienteItems");
             migrationBuilder.DropTable(
                 name: "ReservaItems");
+            migrationBuilder.DropTable(
+                name: "LugarItems");
+            migrationBuilder.DropTable(
+                name: "HotelItems");
+            migrationBuilder.DropTable(
+                name: "RestauranteItems");
+            migrationBuilder.DropTable(
+                name: "ConductorItems");
+            migrationBuilder.DropTable(
+                name: "VehiculoItems");
         }
     }
 }

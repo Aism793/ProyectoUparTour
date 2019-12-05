@@ -68,9 +68,133 @@ namespace ProyectoUparTour.Migrations
                     b.Property<string>("Fecha")
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<string>("Hora")
+                        .HasColumnType("nvarchar(7)");
+
                     b.HasKey("Id");
 
                     b.ToTable("ReservaItems");
+                });
+            modelBuilder.Entity("ClienteSharpHTTP.Models.LugarItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LugarItems");
+                });
+            modelBuilder.Entity("ClienteSharpHTTP.Models.HotelItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<long>("Telefono")
+                        .HasColumnType("bigint");
+
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Descuento")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HotelItems");
+                });
+            modelBuilder.Entity("ClienteSharpHTTP.Models.RestauranteItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<long>("Telefono")
+                        .HasColumnType("bigint");
+
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Descuento")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RestauranteItems");
+                });
+            modelBuilder.Entity("ClienteSharpHTTP.Models.ConductorItem", b =>
+                {
+                    b.Property<string>("Identificacion")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(15)")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Apellidos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("Telefono")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Licencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Identificacion");
+
+                    b.ToTable("ConductorItems");
+                });
+            modelBuilder.Entity("ClienteSharpHTTP.Models.VehiculoItem", b =>
+                {
+                    b.Property<string>("Placa")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(10)")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Modelo")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Marca")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Soat")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Tecnomecanica")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("Capacidad")
+                        .HasColumnType("int");
+
+                    b.HasKey("Placa");
+
+                    b.ToTable("VehiculoItems");
                 });
 #pragma warning restore 612, 618
         }

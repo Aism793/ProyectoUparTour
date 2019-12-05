@@ -5,12 +5,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script language="javascript">
+    step=0;
+    function autoImgFlip() {
+    if (step < 4) {step++;}
+    else {step=0;}
+    if (step==0)
+    {a.src="./assets/Valledupar.jpg";}
+    if (step==1)
+    {a.src="./assets/Pueblo Bello.jpg";}
+    setTimeout("autoImgFlip()", 1000);
+    if (step==2)
+    {a.src="./assets/Chimichagua.jpg";}
+    }
+    
+    </script>
 </head>
 <body>
     <header><h1>Lugares</h1></header>
     <div class="row">       
         <div class="col-md">        
-            <div class="card">
+            <div class="card" onLoad="autoImgFlip();">
               <img class="card-img-top" src="./assets/Valledupar.jpg">            
               <div class="card-body">
                 <h4 class="card-title">Valledupar, Cesar</h4>
@@ -19,8 +34,8 @@
                   La ciudad es un importante centro para la producción agrícola, agroindustrial y ganadera en la región
                   comprendida entre el norte del departamento del Cesar y el sur del departamento de La Guajira.
                 </p>
-                <a routerLink="/clienteadd" class="btn btn-primary">Tour</a>&nbsp;&nbsp;
-                <a routerLink="/clienteadd" class="btn btn-primary">Viaje</a>
+               
+                <a routerLink="/clienteadd" class="btn btn-primary">Reservar</a>
               </div>
             </div>          
         </div>
@@ -37,8 +52,8 @@
                   tener en su jurisdicción la capital de la Cultura Arhuaca Nabusímake con todas las 
                   características de la cultura indígena en pleno esplendor
                 </p>
-                <a routerLink="/clienteadd" class="btn btn-primary">Tour</a>&nbsp;&nbsp;
-                <a routerLink="/clienteadd" class="btn btn-primary">Viaje</a>
+                
+                <a routerLink="/clienteadd" class="btn btn-primary">Reservar</a>
               </div>
             </div>          
         </div>
@@ -57,8 +72,8 @@
                   constituyen el segundo factor de ingresos. Sus sitios turísticos más importante son la ciénaga 
                   de Zapatosa y el muelle flotante.
                 </p>
-                <a routerLink="/clienteadd" class="btn btn-primary">Tour</a>&nbsp;&nbsp;
-                <a routerLink="/clienteadd" class="btn btn-primary">Viaje</a>
+                
+                <a routerLink="/clienteadd" class="btn btn-primary">Reservar</a>
               </div>
             </div>          
         </div>
@@ -74,8 +89,8 @@
                   oriental del país a través de la Troncal del Magdalena (Ruta Nacional 45) y la Troncal Central (Ruta Nacional 45A), contando 
                   además con transporte aéreo, férreo y en forma paralela con la vía fluvial del río Magdalena.
                 </p> 
-                <a routerLink="/clienteadd" class="btn btn-primary">Tour</a>&nbsp;&nbsp;
-                <a routerLink="/clienteadd" class="btn btn-primary">Viaje</a>
+                
+                <a routerLink="/clienteadd" class="btn btn-primary">Reservar</a>
               </div>
             </div>          
         </div>
@@ -94,8 +109,8 @@
                 metropolitana de Valledupar.
                 El clima de Manaure es de tipo templado cálido. la temperatura media anual ronda los 24 °C con mínimas y máximas de 18 y 30 °C aproximadamente.
               </p>
-              <a routerLink="/clienteadd" class="btn btn-primary">Tour</a>&nbsp;&nbsp;
-              <a routerLink="/clienteadd" class="btn btn-primary">Viaje</a>
+              
+              <a routerLink="/clienteadd" class="btn btn-primary">Reservar</a>
             </div>
           </div>          
       </div>
@@ -112,8 +127,8 @@
                 Zapatosa Red Turística (Corporación sin animo de lucro en pro del Turismo en la Ciénaga de la Zapatosa).
 
               </p>
-              <a routerLink="/clienteadd" class="btn btn-primary">Tour</a>&nbsp;&nbsp;
-              <a routerLink="/clienteadd" class="btn btn-primary">Viaje</a>
+              
+              <a routerLink="/clienteadd" class="btn btn-primary">Reservar</a>
             </div>
           </div>          
       </div>

@@ -15,8 +15,9 @@ headers: new HttpHeaders ({ 'Content-Type': 'application/json'})
 export class ReservaService {
 
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl:string) { }
-
+  
   addReserva(reserva:Reserva): Observable<Reserva> {
+    
     return this.http.post<Reserva>(this.baseUrl+'api/Reserva',reserva,httpOptions).pipe(
       tap((newReserva: Reserva) => this.log(`added NewReserva w/ id=${newReserva.id}`)),
       catchError(this.handleError<Reserva>('addReserva'))
