@@ -30,7 +30,7 @@ export class VehiculoService {
       catchError(this.handleError<Vehiculo[]>('getAll'))
     );
   }
-  get(id: number): Observable<Vehiculo>
+  get(id: string): Observable<Vehiculo>
   {
     const url=`${this.baseUrl + 'api/Vehiculo'}/${id}`;
     return this.http.get<Vehiculo>(url).pipe(

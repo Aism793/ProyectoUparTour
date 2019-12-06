@@ -29,9 +29,9 @@ namespace VehiculoSharpHTTP.Controllers
            return await _context.VehiculoItems.ToListAsync();
        }
        [HttpGet("{placa}")]
-       public async Task<ActionResult<VehiculoItem>> GetVehiculoItem(string id)
+       public async Task<ActionResult<VehiculoItem>> GetVehiculoItem(string placa)
        {
-           var vehiculoItem=await _context.VehiculoItems.FindAsync(id);
+           var vehiculoItem=await _context.VehiculoItems.FindAsync(placa);
            if(vehiculoItem==null)
            {
                return NotFound();
@@ -50,9 +50,9 @@ namespace VehiculoSharpHTTP.Controllers
            return CreatedAtAction(nameof(GetVehiculoItem), new {id=item.Placa}, item);
        }
        [HttpPut("{placa}")]
-       public async Task<IActionResult> PutVehiculoItem(string id, VehiculoItem item)
+       public async Task<IActionResult> PutVehiculoItem(string placa, VehiculoItem item)
        {
-           if(id!=item.Placa)
+           if(placa!=item.Placa)
            {
                return BadRequest();
            }
@@ -63,9 +63,9 @@ namespace VehiculoSharpHTTP.Controllers
            return NoContent();
        }
        [HttpDelete("{placa}")]
-       public async Task<IActionResult> DeleteVehiculoItem(string id){
+       public async Task<IActionResult> DeleteVehiculoItem(string placa){
            var VehiculoItem = await
-           _context.VehiculoItems.FindAsync(id);
+           _context.VehiculoItems.FindAsync(placa); 
 
            if(VehiculoItem==null)
            {

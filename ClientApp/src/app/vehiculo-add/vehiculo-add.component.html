@@ -1,5 +1,6 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-
+<div class="row">
+<div class="col-6">
 <div class="form-group">
     <label>Placa:</label>
     <input formControlName="placa" class="form-control"
@@ -9,6 +10,8 @@
         <div *ngIf="f.placa.errors.maxlength">La placa solo puede tener hasta 14 caracteres</div>
     </div>
 </div>
+</div><br>
+<div class="col-6">
 <div class="form-group">
     <label>Modelo:</label>
     <input formControlName="modelo" class="form-control"
@@ -18,6 +21,8 @@
         <div *ngIf="f.modelo.errors.maxlength">modelo solo puede tener hasta 30 caracteres</div>
     </div>
 </div>
+</div><br>
+<div class="col-6">
 <div class="form-group">
     <label>Marca:</label>
     <input formControlName="marca" class="form-control"
@@ -27,6 +32,8 @@
         <div *ngIf="f.marca.errors.maxlength(20)">marca solo puede tener hasta 20 caracteres</div>
     </div>
 </div>
+</div><br>
+<div class="col-6">
 <div class="form-group">
     <label>Soat:</label>
     <input formControlName="soat" class="form-control"
@@ -36,6 +43,8 @@
         <div *ngIf="f.soat.errors.maxlength(20)">correo solo puede tener hasta 20 caracteres</div>
     </div>
 </div>
+</div><br>
+<div class="col-6">
 <div class="form-group">
     <label>Tecnomecanica:</label>
     <input formControlName="tecnomecanica" class="form-control"
@@ -45,6 +54,8 @@
         <div *ngIf="f.tecnomecanica.errors.maxlength(30)">La tecnomecanica solo puede tener hasta 30 caracteres</div>
     </div>
 </div>
+</div><br>
+<div class="col-6">
 <div class="form-group">
     <label>Capacidad:</label>
     <input formControlName="capacidad" class="form-control"
@@ -53,8 +64,10 @@
         <div *ngIf="f.capacidad.errors.required">La capacidad es requerida</div>
     </div>
 </div>
+</div><br>
+</div>
 <div class="form-group">
-    <button  (click)="add()" class="btn btn-dark">
+    <button  class="btn btn-dark">
         Registrar
     </button>    
     <button class="btn btn-secondary" type="reset" (click)="onReset()">Limpiar</button>
