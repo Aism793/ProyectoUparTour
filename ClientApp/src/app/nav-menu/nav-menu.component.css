@@ -86,3 +86,47 @@ body{
   background: rgb(37, 36, 37);
 }
 
+
+ul, ol{
+  list-style: none;
+}
+
+.nav ul li ul a{
+  background-color:#7a6373;
+}
+
+.nav li a{
+  background-color:#e2e7e9;
+  color:rgb(10, 9, 9);
+  text-decoration:none;
+  padding: 10px 15px;
+  display:block;
+  
+}
+
+.nav li a:hover{
+  background-color:#99337b;
+  
+}
+
+.nav > li{
+  float:left;
+}
+
+.nav li ul{
+  display:none;
+  position:absolute;
+  min-width:140px;
+
+}
+
+.nav li:hover > ul{
+  display:block;
+  z-index:1;
+  
+}
+
+.foto{
+  float:left;
+  vertical-align: middle;
+}
