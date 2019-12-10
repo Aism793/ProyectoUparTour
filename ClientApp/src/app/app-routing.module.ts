@@ -26,8 +26,21 @@ import { ConductorEditComponent } from './conductor-edit/conductor-edit.componen
 import { VehiculoListComponent } from './vehiculo-list/vehiculo-list.component';
 import { VehiculoAddComponent } from './vehiculo-add/vehiculo-add.component';
 import { VehiculoEditComponent } from './vehiculo-edit/vehiculo-edit.component';
+import { ClienteConsultaComponent } from './clientes/consulta/cliente-consulta/cliente-consulta.component';
+//import { ClienteConsultaModalComponent } from './clientes/consulta/cliente-consulta-modal/cliente-consulta-modal.component';
+//import { ModalComponent } from './clientes/consulta/modal/modal.component';
+import { HotelConsultaComponent } from './clientes/consulta/hotel-consulta/hotel-consulta.component';
+import { ConductorConsultaComponent } from './clientes/consulta/conductor-consulta/conductor-consulta.component';
+import { RestauranteConsultaComponent } from './clientes/consulta/restaurante-consulta/restaurante-consulta.component';
+import { VehiculoConsultaComponent } from './clientes/consulta/vehiculo-consulta/vehiculo-consulta.component';
+import { ReservaConsultaComponent } from './clientes/consulta/reserva-consulta/reserva-consulta.component';
+import { LugarConsultaComponent } from './clientes/consulta/lugar-consulta/lugar-consulta.component';
 
 const routes: Routes = [
+  {
+    path:'',
+    component:ServiciosComponent
+  },
   {
     path:'clientelist',
     component: ClienteListComponent
@@ -127,6 +140,43 @@ const routes: Routes = [
   {
     path:'menu',
     component:MenuComponent
+  },
+  {
+    path:'clienteconsulta',
+    component:ClienteConsultaComponent
+  },
+  /*{
+    path:'clienteconsultamodal',
+    component:ClienteConsultaModalComponent
+  },
+  {
+    path:'modal',
+    component:ModalComponent
+  },*/
+  {
+    path:'hotelconsulta',
+    component:HotelConsultaComponent
+  }
+  ,
+  {
+    path:'conductorconsulta',
+    component:ConductorConsultaComponent
+  },
+  {
+    path:'restauranteconsulta',
+    component:RestauranteConsultaComponent
+  },
+  {
+    path:'vehiculoconsulta',
+    component:VehiculoConsultaComponent
+  },
+  {
+    path:'reservaconsulta',
+    component:ReservaConsultaComponent
+  },
+  {
+    path:'lugarconsulta',
+    component:LugarConsultaComponent
   }
 ]
 

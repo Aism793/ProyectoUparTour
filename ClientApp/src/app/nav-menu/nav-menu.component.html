@@ -18,7 +18,7 @@ class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
 [ngClass]="{ show: isExpanded }"
 >
 <ul class="nav justify-content-center">
-
+ 
     
 <li class="nav-item" [routerLinkActive]="['link-active']">
   <a class="nav-link text-dark" [routerLink]="['/menu']"
@@ -52,65 +52,71 @@ class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
     >Servicios</a>
     <ul >
         <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/clientelist']"
+            <a class="nav-link text-dark" [routerLink]="['/clienteconsulta']"
               >Consultar clientes</a
             >
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/reservalist']"
-              >Consultar reservas</a
+        <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/hotelconsulta']"
+              >Consultar hoteles</a
             >
           </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/restauranteconsulta']"
+                >Consultar restaurantes</a
+              >
+            </li>
+            <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/lugarconsulta']"
+                >Consultar sitios turísticos</a
+              >
+            </li>
+            <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/conductorconsulta']"
+                >Consultar  conductores</a
+              >
+            </li>
+            <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/vehiculoconsulta']"
+                >Consultar vehiculos</a
+              >
+            </li>
+            <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/reservaconsulta']"
+                >Consultar reservas</a
+              >
+            </li>
+          
           <li class="nav-item" [routerLinkActive]="['link-active']">
               <a class="nav-link text-dark" [routerLink]="['/lugaradd']"
                 >Registrar sitio turístico</a
               >
             </li>
-            <li class="nav-item" [routerLinkActive]="['link-active']">
-              <a class="nav-link text-dark" [routerLink]="['/lugarlist']"
-                >Consultar sitios turísticos</a
-              >
-            </li>
+            
             <li class="nav-item" [routerLinkActive]="['link-active']">
               <a class="nav-link text-dark" [routerLink]="['/hoteladd']"
                 >Registrar hotel</a
               >
             </li>
-            <li class="nav-item" [routerLinkActive]="['link-active']">
-              <a class="nav-link text-dark" [routerLink]="['/hotellist']"
-                >Consultar hoteles</a
-              >
-            </li>
+            
             <li class="nav-item" [routerLinkActive]="['link-active']">
                 <a class="nav-link text-dark" [routerLink]="['/restauranteadd']"
                   >Registrar restaurante</a
                 >
               </li>
-              <li class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link text-dark" [routerLink]="['/restaurantelist']"
-                  >Consultar restaurantes</a
-                >
-              </li>
+              
               <li class="nav-item" [routerLinkActive]="['link-active']">
                 <a class="nav-link text-dark" [routerLink]="['/conductoradd']"
                   >Registrar conductor</a
                 >
               </li>
-              <li class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link text-dark" [routerLink]="['/conductorlist']"
-                  >Consultar conductores</a
-                >
-              </li>
+              
               <li class="nav-item" [routerLinkActive]="['link-active']">
                 <a class="nav-link text-dark" [routerLink]="['/vehiculoadd']"
                   >Registrar vehiculo</a
                 >
               </li>
-              <li class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link text-dark" [routerLink]="['/vehiculolist']"
-                  >Consultar vehiculos</a
-                >
-              </li>
+              
     </ul>
 </li>
 </ul>
